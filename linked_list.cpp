@@ -21,6 +21,35 @@ void insertHead (Node *& head, int val)  // truyền tham chiếu đến con tr�
     head = newNode;
 }
 
+void insert_at(Node *& head, int val, int pos)
+{
+    Node* newNode = new Node(val);
+    Node* temp = head;
+
+    if(pos == 0) 
+    {
+        newNode -> next = head;
+        head = newNode;
+        return;
+    }
+
+    for(int i = 0; (i < pos - 1) && temp != nullptr; i++)
+    {
+        temp = temp->next;
+    }
+
+    
+    if(temp == nullptr)
+    {
+        cout << "Wrong Position!" << endl;
+        return;
+    }
+
+    newNode->next = temp->next;
+    temp->next = newNode;
+    
+}
+
 void insertTail (Node *& head, int val)
 {
     Node * newNode = new Node(val);
@@ -94,14 +123,9 @@ int main()
     cout << "Start...\n";
 
     Node* head = nullptr;
-    insertHead(head, 36);
-    insertTail(head, 37);
-    insertHead (head, 98);
-    insertHead(head, 99999);
-
-    printList(head);
-
-    deleteNode(head, 36);
+    insert_at(head, 36, 0);
+    insert_at(head, 100, 1);
+    insert_at(head, 111, 2);
 
     printList(head);
     return 0;
