@@ -43,8 +43,6 @@ void insertTail (Node *& head, int val)
     temp -> next = newNode;
 }
 
-void insertt
-
 void deleteNode (Node *& head, int val)
 {
     
