@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "set": "cpp",
+        "atomic": "cpp",
+        "string": "cpp",
+        "random": "cpp",
+        "fstream": "cpp",
+        "sstream": "cpp",
+        "type_traits": "cpp",
+        "vector": "cpp"
+    }
+}
